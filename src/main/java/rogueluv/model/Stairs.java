@@ -3,7 +3,7 @@ package rogueluv.model;
 import rogueluv.controller.RogueLuv;
 
 /**
- * Classe modèle d'un escalier abstrait pour RogueLuv
+ * Classe modÃ¨le d'un escalier abstrait pour RogueLuv
  * @author gocario
  * @version 1.0
  */

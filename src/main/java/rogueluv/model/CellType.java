@@ -1,14 +1,14 @@
 package rogueluv.model;
 
 /**
- * Classe modèle d'un type de cellule pour RogueLuv
+ * Classe modÃ¨le d'un type de cellule pour RogueLuv
  * @author gocario
  * @version 1.0
  */
 public abstract class CellType {
 
     /**
-     * Action de la cellule à effectuer
+     * Action de la cellule Ã  effectuer
      * @return true Si la case est reset
      */
     public abstract boolean action();

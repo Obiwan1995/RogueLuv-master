@@ -7,7 +7,7 @@ import rogueluv.framework.Size;
 import rogueluv.framework.Vector2;
 
 /**
- * Classe modèle d'un joueur pour RogueLuv
+ * Classe modÃ¨le d'un joueur pour RogueLuv
  * @author gocario
  * @version 1.0
  */
@@ -51,7 +51,7 @@ public final class Player {
 
     public void addStrength(int strength) {
         this.strength += strength;
-        //La force ne peut pas être négative
+        //La force ne peut pas Ãªtre nÃ©gative
         if(this.strength <=0) {
             this.strength = 0;
         }
@@ -94,9 +94,9 @@ public final class Player {
     }
 
     /**
-     * Déplace le joueur en fonction d'une direction spécifié
+     * DÃ©place le joueur en fonction d'une direction spÃ©cifiÃ©
      * @param direction Direction
-     * @return true Si le joueur a bougé
+     * @return true Si le joueur a bougÃ©
      */
     public boolean move(Direction direction) {
 
@@ -137,7 +137,7 @@ public final class Player {
     }
     
     /**
-     * Découvre 3x3 : les 8 cases autour du joueur
+     * DÃ©couvre 3x3 : les 8 cases autour du joueur
      * @return int Nombre de monstres alentours
      */
     public int discover() {

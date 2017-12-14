@@ -3,7 +3,7 @@ package rogueluv.model;
 import rogueluv.framework.Vector2;
 
 /**
- * Classe modèle d'un élément abstrait pour RogueLuv
+ * Classe modÃ¨le d'un Ã©lÃ©ment abstrait pour RogueLuv
  * @author gocario
  * @version 1.0
  */

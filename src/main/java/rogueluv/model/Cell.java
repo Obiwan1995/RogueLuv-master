@@ -3,7 +3,7 @@ package rogueluv.model;
 import rogueluv.framework.Vector2;
 
 /**
- * Classe modèle d'une cellule pour RogueLuv
+ * Classe modÃ¨le d'une cellule pour RogueLuv
  * @author gocario
  * @version 1.0
  */
@@ -54,7 +54,7 @@ public class Cell extends Element {
     
     
     /**
-     * Gère l'action du type de cellule
+     * GÃ¨re l'action du type de cellule
      */
     public void action() {
         if (cellType != null) {

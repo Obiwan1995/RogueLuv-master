@@ -98,7 +98,7 @@ public class RogueLuv {
     }
     
     /**
-     * Créée un nouveau jeu
+     * CrÃ©Ã©e un nouveau jeu
      * @return void
      */
     public void createGame() {
@@ -144,8 +144,8 @@ public class RogueLuv {
 
         windowView.updateNearMonsters(player.discover());
         windowView.update();
-        windowView.update(); // Bizarrement, sans le second, cela pose problème
-        windowView.setLocationRelativeTo(null); //On centre la fenêtre sur l'écran
+        windowView.update(); // Bizarrement, sans le second, cela pose problÃ¨me
+        windowView.setLocationRelativeTo(null); //On centre la fenÃªtre sur l'Ã©cran
         isRunning = true;
     }
     
@@ -156,10 +156,10 @@ public class RogueLuv {
     public void winGame() {
 
         String pseudo = JOptionPane.showInputDialog(null,"Pseudo :");
-        writeConsole("Félicitations " + pseudo + " vous avez fini le jeu.");
+        writeConsole("FÃ©licitations " + pseudo + " vous avez fini le jeu.");
         Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (Player.getInstance().getGold()*2));
         if(scoreAdded) {
-            writeConsole(pseudo + " à établi un nouveau record de " + (Player.getInstance().getGold()*2) + " points !");
+            writeConsole(pseudo + " Ã  Ã©tabli un nouveau record de " + (Player.getInstance().getGold()*2) + " points !");
         }
         windowView.showScores();
         isRunning = false;
@@ -171,11 +171,11 @@ public class RogueLuv {
      */
     public void loseGame(String monsterName) {
         
-        writeConsole("Vous avez été tué par "+monsterName+"...");
+        writeConsole("Vous avez Ã©tÃ© tuÃ© par "+monsterName+"...");
         String pseudo = JOptionPane.showInputDialog(null,"Pseudo :");
         Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (Player.getInstance().getGold()));
         if(scoreAdded) {
-            writeConsole(pseudo + " à établi un nouveau record de " + (Player.getInstance().getGold()) + " points !");
+            writeConsole(pseudo + " Ã  Ã©tabli un nouveau record de " + (Player.getInstance().getGold()) + " points !");
         }
         windowView.showScores();
         isRunning = false;
@@ -183,9 +183,9 @@ public class RogueLuv {
     
     
     /**
-     * Déplace le joueur
-     * @param direction Direction dans laquelle le déplacer
-     * @return true Si le joueur a bougé
+     * DÃ©place le joueur
+     * @param direction Direction dans laquelle le dÃ©placer
+     * @return true Si le joueur a bougÃ©
      */
     public boolean movePlayer(Direction direction) {
         
@@ -248,7 +248,7 @@ public class RogueLuv {
     
     /**
      * Ecris une nouvelle ligne dans la vue Console
-     * @param string de caractères à écrire
+     * @param string de caractÃ¨res Ã  Ã©crire
      * @return void
      */
     public void writeConsole(String string) {
@@ -257,7 +257,7 @@ public class RogueLuv {
     }
 
     /**
-     * Gère les touches appuyées
+     * GÃ¨re les touches appuyÃ©es
      * @param e
      * @return void
      */
@@ -308,7 +308,7 @@ public class RogueLuv {
 
     /**
      * Fonction main
-     * @param args Arguments d'entrés du programme
+     * @param args Arguments d'entrÃ©s du programme
      * @return void
      */
     public static void main(String[] args) {

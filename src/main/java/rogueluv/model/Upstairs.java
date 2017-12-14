@@ -3,7 +3,7 @@ package rogueluv.model;
 import rogueluv.controller.RogueLuv;
 
 /**
- * Classe modèle d'un escalier ascendant pour RogueLuv
+ * Classe modÃ¨le d'un escalier ascendant pour RogueLuv
  * @author gocario
  * @version 1.0
  */
@@ -32,7 +32,7 @@ public class Upstairs extends Stairs {
 
 
     /**
-     * Renvoie le nombre d'or dans les étages suivants
+     * Renvoie le nombre d'or dans les Ã©tages suivants
      * @return int Nombre d'or suivant
      */
     @Override
@@ -41,7 +41,7 @@ public class Upstairs extends Stairs {
     }
     
     /**
-     * Renvoie le nombre de monstre dans les étages suivants
+     * Renvoie le nombre de monstre dans les Ã©tages suivants
      * @return int Nombre de monstre suivants
      */
     @Override

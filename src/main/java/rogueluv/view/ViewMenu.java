@@ -74,23 +74,23 @@ public class ViewMenu extends JMenuBar {
         menuItem.addActionListener(new java.awt.event.ActionListener(){
         public void actionPerformed(ActionEvent e) 
         {
-            System.out.println("Création d'une nouvelle partie");
+            System.out.println("CrÃ©ation d'une nouvelle partie");
             RogueLuv.getInstance().createGame();
         }
         });
         menu.add(menuItem);
 
-        //Menu difficulté
+        //Menu difficultÃ©
         menu.addSeparator();
         
-        submenu = new JMenu("Difficulté");
+        submenu = new JMenu("DifficultÃ©");
         menuItem = new JMenuItem("Normal");
         menuItem.addActionListener(new java.awt.event.ActionListener(){
         public void actionPerformed(ActionEvent e) 
         {
-            System.out.println("Difficulté => Normal");
+            System.out.println("DifficultÃ© => Normal");
             RogueLuv.getInstance().setDifficulty(Difficulty.Normal);
-            RogueLuv.getInstance().writeConsole("Difficulté => " + RogueLuv.getInstance().getDifficulty());
+            RogueLuv.getInstance().writeConsole("DifficultÃ© => " + RogueLuv.getInstance().getDifficulty());
         }
         });
         submenu.add(menuItem);
@@ -99,9 +99,9 @@ public class ViewMenu extends JMenuBar {
         menuItem.addActionListener(new java.awt.event.ActionListener(){
         public void actionPerformed(ActionEvent e) 
         {
-            System.out.println("Difficulté => Difficile");
+            System.out.println("DifficultÃ© => Difficile");
             RogueLuv.getInstance().setDifficulty(Difficulty.Hard);
-            RogueLuv.getInstance().writeConsole("Difficulté => " + RogueLuv.getInstance().getDifficulty());
+            RogueLuv.getInstance().writeConsole("DifficultÃ© => " + RogueLuv.getInstance().getDifficulty());
         }
         });
         submenu.add(menuItem);
@@ -109,9 +109,9 @@ public class ViewMenu extends JMenuBar {
         menuItem.addActionListener(new java.awt.event.ActionListener(){
         public void actionPerformed(ActionEvent e) 
         {
-            System.out.println("Difficulté => Hardcore");
+            System.out.println("DifficultÃ© => Hardcore");
             RogueLuv.getInstance().setDifficulty(Difficulty.Hardcore);
-            RogueLuv.getInstance().writeConsole("Difficulté => " + RogueLuv.getInstance().getDifficulty());
+            RogueLuv.getInstance().writeConsole("DifficultÃ© => " + RogueLuv.getInstance().getDifficulty());
         }
         });
         
@@ -143,7 +143,7 @@ public class ViewMenu extends JMenuBar {
         
         //CheckBox Tutorial
         menu.addSeparator();
-        final JCheckBoxMenuItem checkItem = new JCheckBoxMenuItem("Tutorial au démarrage");
+        final JCheckBoxMenuItem checkItem = new JCheckBoxMenuItem("Tutorial au dÃ©marrage");
         if(G_Tuto.getTuto()) 
         {
             checkItem.setState(true);
@@ -153,12 +153,12 @@ public class ViewMenu extends JMenuBar {
         {
             if(checkItem.getState()){
                 G_Tuto.modifyTuto(true);
-                System.out.println("Tutorial activé");
+                System.out.println("Tutorial activÃ©");
             }
             else
             {
                 G_Tuto.modifyTuto(false);
-                System.out.println("Tutorial desactivé");
+                System.out.println("Tutorial desactivÃ©");
             }
         }
         });
@@ -184,7 +184,7 @@ public class ViewMenu extends JMenuBar {
         }
         else 
         {
-            meilleursScores = "\nAucun score enregistré pour le moment";
+            meilleursScores = "\nAucun score enregistrÃ© pour le moment";
         }
         //TODO: Recuperer les scores
        JOptionPane.showConfirmDialog(null, "Meilleurs scores : \n" + meilleursScores.toString(), 
@@ -200,9 +200,9 @@ public class ViewMenu extends JMenuBar {
     
     public void tuto(){
         JOptionPane.showConfirmDialog(null, 
-            "Déplacement : ZQSD ou les flèches directionnelles.\n" +
+            "DÃ©placement : ZQSD ou les flÃ¨ches directionnelles.\n" +
             "Appuyez sur [Y] pour emprunter un escalier\n" +
-            "Difficulté modifiable dans le menu correspondant\n" +
+            "DifficultÃ© modifiable dans le menu correspondant\n" +
             "Raccourci pour lancer la partie : [N]\n\n" +
             "Bon jeu !"
         , "Tutorial \n", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);

@@ -3,7 +3,7 @@ package rogueluv.model;
 import rogueluv.controller.RogueLuv;
 
 /**
- * Classe modèle d'un trésor pour RogueLuv
+ * Classe modÃ¨le d'un trÃ©sor pour RogueLuv
  * @author gocario
  * @version 1.0
  */
@@ -23,7 +23,7 @@ public class Treasure extends CellType {
 
     /**
      * Constructeur de la classe
-     * @param gold Or contenu dans le trésor
+     * @param gold Or contenu dans le trÃ©sor
      */
     public Treasure(int gold) {
         this.gold = gold;
@@ -31,7 +31,7 @@ public class Treasure extends CellType {
 
 
     /**
-     * Action de la cellule: Récupérer le trésor
+     * Action de la cellule: RÃ©cupÃ©rer le trÃ©sor
      * @return true Si la case est reset
      */
     @Override
@@ -43,8 +43,8 @@ public class Treasure extends CellType {
     }
 
     /**
-     * Renvoie l'or du trésor
-     * @return Or contenu dans le trésor
+     * Renvoie l'or du trÃ©sor
+     * @return Or contenu dans le trÃ©sor
      */
     @Override
     public int countGold() {

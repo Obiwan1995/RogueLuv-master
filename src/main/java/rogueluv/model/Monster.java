@@ -5,7 +5,7 @@ import rogueluv.controller.RogueLuv;
 import rogueluv.framework.Random;
 
 /**
- * Classe modèle d'un monstre pour RogueLuv
+ * Classe modÃ¨le d'un monstre pour RogueLuv
  * @author gocario
  * @version 1.0
  */
@@ -65,12 +65,12 @@ public class Monster extends CellType {
 
 
     /**
-     * Action de la cellule: Récupérer le trésor
+     * Action de la cellule: RÃ©cupÃ©rer le trÃ©sor
      * @return true Si la case est reset
      */
     @Override
     public boolean action() {
-        //TODO: Faire un lancer aléatoire pour dï¿½terminer l'issue du combat
+        //TODO: Faire un lancer alÃ©atoire pour dÃ¯Â¿Â½terminer l'issue du combat
         System.out.println("Monster.action()");
         
         Random rand = new Random();

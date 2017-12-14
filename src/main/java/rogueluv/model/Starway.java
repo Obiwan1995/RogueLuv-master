@@ -6,7 +6,7 @@ import rogueluv.controller.RogueLuv;
 import rogueluv.controller.G_Score;
 
 /**
- * Classe modèle d'un escalier finissant pour RogueLuv
+ * Classe modÃ¨le d'un escalier finissant pour RogueLuv
  * @author gocario
  * @version 1.0
  */

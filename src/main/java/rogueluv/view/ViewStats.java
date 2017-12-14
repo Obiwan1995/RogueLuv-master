@@ -53,7 +53,7 @@ public class ViewStats extends JPanel {
     }
    
     /**
-     * Met à jour l'affichage des stats
+     * Met Ã  jour l'affichage des stats
      * @return void
      */
     public void updateStats() {
@@ -66,7 +66,7 @@ public class ViewStats extends JPanel {
     }
     
     /**
-     * Met à jour l'affichage du nombre de monstres adjacents
+     * Met Ã  jour l'affichage du nombre de monstres adjacents
      * @param count Nombre de monstres proches
      * @return void
      */

@@ -19,7 +19,7 @@ public class G_Score {
             input = new FileInputStream("scores.properties");
             // Chargement du fichier
             prop.load(input);
-            // Scores de 1 à 10
+            // Scores de 1 Ã  10
             for(int i=0;i<10;i++) 
             {
                 String playerName;
@@ -33,14 +33,14 @@ public class G_Score {
                 }
                 catch (Exception ex) 
                 {
-                    System.out.println("Il y a moins de 10 scores enregistrés");
+                    System.out.println("Il y a moins de 10 scores enregistrÃ©s");
                     break;
                 }
             }
         } 
         catch (IOException ex) 
         {
-            System.out.println("Aucun score encore enregistré.");
+            System.out.println("Aucun score encore enregistrÃ©.");
         } 
         finally {
             if (input != null) {
@@ -65,7 +65,7 @@ public class G_Score {
                 if(scores[i] != null) {
                     prop.setProperty("player" + i, scores[i].split(":")[0]);
                     prop.setProperty("score" + i, scores[i].split(":")[1]);
-                    System.out.println("Score " + scores[i] + " enregistré.");
+                    System.out.println("Score " + scores[i] + " enregistrÃ©.");
                 }
             }
             prop.store(output, null);
@@ -90,17 +90,17 @@ public class G_Score {
         Boolean res = false;
         try 
         {
-            //On récupère la nouvelle valeur du score
+            //On rÃ©cupÃ¨re la nouvelle valeur du score
             Integer newScore = Integer.parseInt(score.split(":")[1]);
-            //On récupère l'ensemble des scores enregistrés
+            //On rÃ©cupÃ¨re l'ensemble des scores enregistrÃ©s
             String[] scores = getBestScores();
             for(int i=0;i<10;i++) {
                 if(scores[i] != null) {
-                    //L'ancien score enregistré
+                    //L'ancien score enregistrÃ©
                     Integer oldScore = Integer.parseInt(scores[i].split(":")[1]);
                     //Si on a fait un nouveau record
                     if(newScore > oldScore) {
-                        //On décale les scores qui suivent si il y en a encore
+                        //On dÃ©cale les scores qui suivent si il y en a encore
                         if(i != 9)
                         {
                             for(int j = 9;j>i;j--) {
