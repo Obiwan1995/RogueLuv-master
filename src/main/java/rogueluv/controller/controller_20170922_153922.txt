@@ -1,0 +1,5 @@
+WARNING - 15:39:22: First conversion pass
+ERROR - 15:39:22: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 15:40:15: Convert rogueluv.model
+WARNING - 15:40:15: First conversion pass
+ERROR - 15:40:15: java.net.MalformedURLException: unknown protocol: pathmap

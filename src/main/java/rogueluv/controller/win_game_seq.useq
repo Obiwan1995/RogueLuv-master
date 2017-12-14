@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.1" icons="true" automaticImage="PNG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="rogueluv.controller.RogueLuv" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/controller/RogueLuv.java" binary="false" label="rogueLuv" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="106" y="0"/>    
+    <execution id="2">      
+      <position height="592" width="0" x="0" y="78"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="529" width="0" x="0" y="120"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="73" width="0" x="0" y="214"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="21" width="0" x="0" y="482"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" name="javax.swing.JOptionPane" project="RogueLuv-master" 
+    file="C:/Program Files/Java/jre1.8.0_151/lib/rt.jar" binary="true" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="21" width="0" x="0" y="151"/>    
+    </execution>  
+  </object>  
+  <object id="26" language="java" name="rogueluv.controller.G_Score" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/controller/G_Score.java" binary="false" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="21" width="0" x="0" y="297"/>    
+    </execution>  
+  </object>  
+  <object id="27" language="java" name="rogueluv.model.Player" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/model/Player.java" binary="false" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="12">      
+      <position height="21" width="0" x="0" y="339"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="0" x="0" y="513"/>    
+    </execution>  
+  </object>  
+  <object id="28" language="java" name="rogueluv.model.Player" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/model/Player.java" binary="false" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="14">      
+      <position height="21" width="0" x="0" y="381"/>    
+    </execution>  
+  </object>  
+  <object id="29" language="java" name="rogueluv.model.Player" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/model/Player.java" binary="false" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="20">      
+      <position height="21" width="0" x="0" y="555"/>    
+    </execution>  
+  </object>  
+  <object id="30" language="java" name="rogueluv.view.WindowView" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/view/WindowView.java" binary="false" label="windowView" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="22">      
+      <position height="21" width="0" x="0" y="607"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="21" width="0" x="0" y="245"/>    
+    </execution>  
+  </object>  
+  <object id="31" language="java" name="rogueluv.view.ViewMenu" project="RogueLuv-master" 
+    file="/RogueLuv-master/src/rogueluv/view/ViewMenu.java" binary="false" label="vMenu" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>  
+  </object>  
+  <combined-fragment id="32" interaction-operator="OPT">    
+    <interaction-operand id="33" constraint="scoreAdded">      
+      <fragment refId="15"/>      
+      <fragment refId="17"/>      
+      <fragment refId="19"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" operation="winGame():void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="showInputDialog(java.awt.Component,java.lang.Object):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="writeConsole(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="addScore(java.lang.String):java.lang.Boolean" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="getInstance():rogueluv.model.Player" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="getGold():int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="writeConsole(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="getInstance():rogueluv.model.Player" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="getGold():int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="showScores():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="writeConsole(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>
+</sequence-diagram>

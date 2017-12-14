@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/controller/G_Score.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/controller/RogueLuv.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Cell.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/CellType.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Element.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Monster.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Player.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Stairs.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Starway.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Treasure.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/model/Upstairs.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/view/ViewFloor.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/view/ViewMenu.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rogueluv/view/ViewStats.java" charset="ISO-8859-1" />
+  </component>
+</project>
