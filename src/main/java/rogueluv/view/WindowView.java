@@ -42,7 +42,6 @@ public class WindowView extends JFrame implements KeyListener {
     
     /**
      * Initialise la JFrame `this`
-     * @return void
      */
     private void initialize() {
         //TODO: Set up childs JPanels
@@ -90,7 +89,6 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * Affiche un message de demande à l'utilisateur pour le changement d'étage
-     * @return void
      */
     public void askUpstairs() {
 
@@ -98,7 +96,6 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * Met à jour tous les Views*`v*`.
-     * @return void
      */
     public void update() {
         vStats.updateStats();
@@ -109,7 +106,6 @@ public class WindowView extends JFrame implements KeyListener {
     /**
      * Met à jour le nombre de monstres adjacents.
      * @param count Nombre de monstres proches
-     * @return void
      */
     public void updateNearMonsters(int count) {
         vStats.updateNearMonsters(count);
@@ -118,8 +114,7 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * KeyListener.keyPressed
-     * @param e
-     * @return void
+     * @param e Evénement lié à l'appui de touche
      */
     public void keyPressed(KeyEvent e) {
         RogueLuv.getInstance().keyPressed(e);
@@ -128,8 +123,7 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * KeyListener.keyReleased
-     * @param e
-     * @return void
+     * @param e Evénement lié à l'appui de touche
      */
     public void keyReleased(KeyEvent e) {
         //TODO: ... ?
@@ -137,8 +131,7 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * KeyListener.keyTyped
-     * @param e
-     * @return void
+     * @param e Evénement lié à l'appui de touche
      */
     public void keyTyped(KeyEvent e) {
         //TODO: ... ?
@@ -146,7 +139,7 @@ public class WindowView extends JFrame implements KeyListener {
 
     /**
      * Ecris une ligne dans ViewConsole`vConsole`
-     * @return void
+     * @param string Chaîne de caractères à écrire
      */
     public void writeConsole(String string) {
         vConsole.writeLine(string);
@@ -155,7 +148,6 @@ public class WindowView extends JFrame implements KeyListener {
     
     /**
      * Vide la console
-     * @return void
      */
     public void clearConsole() {
         vConsole.clear();
@@ -163,7 +155,6 @@ public class WindowView extends JFrame implements KeyListener {
     
     /**
      * Affiche les meilleurs scores
-     * @return void
      */
     public void showScores() {
         vMenu.showBestScores();

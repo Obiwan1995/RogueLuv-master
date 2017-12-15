@@ -24,6 +24,7 @@ public class ViewConsole extends JPanel {
 
     /**
      * Constructeur de la classe
+     * @param listener Listener écoutant les appuis de touches
      */
     public ViewConsole(KeyListener listener) {
         initialize(listener);
@@ -31,7 +32,6 @@ public class ViewConsole extends JPanel {
     
     /**
      * Initialise le JPanel `this`
-     * @return void
      */
     private void initialize(KeyListener listener) {
         //TODO: Set up the size of the JTextArea`console`
@@ -48,7 +48,6 @@ public class ViewConsole extends JPanel {
     
     /**
      * Efface tout le contenu de la console
-     * @return void
      */
     public void clear() {
         nLine = 0;
@@ -59,7 +58,6 @@ public class ViewConsole extends JPanel {
     /**
      * Ajoute une ligne dans la console
      * @param row Ligne ? ajouter
-     * @return void
      */
     public void writeLine(String row) {
         //TODO: Write a line in the JTextArea`console`
@@ -84,7 +82,6 @@ public class ViewConsole extends JPanel {
     /**
      * Modifie la couleur du texte de la console
      * @param color Couleur de modification
-     * @return void
      */
     public void setForegroundColor(Color color) {
         console.setForeground(color);
@@ -93,7 +90,6 @@ public class ViewConsole extends JPanel {
     /**
      * Modifie la couleur du fond de la console
      * @param color Couleur de modification
-     * @return void
      */
     public void setBackgroundColor(Color color) {
         console.setBackground(color);

@@ -169,7 +169,6 @@ public class ViewMenu extends JMenuBar {
     
     /**
      * Affiche les meilleurs scores
-     * @return void
      */
     public void showBestScores(){
         String[] scores = G_Score.getBestScores();

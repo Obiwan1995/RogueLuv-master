@@ -99,7 +99,6 @@ public class RogueLuv {
     
     /**
      * Créée un nouveau jeu
-     * @return void
      */
     public void createGame() {
         switch (difficulty) {
@@ -151,7 +150,6 @@ public class RogueLuv {
     
     /**
      * Fais gagner le jeu
-     * @return void
      */
     public void winGame() {
 
@@ -167,7 +165,7 @@ public class RogueLuv {
     
     /**
      * Fais perdre le jeu
-     * @return void
+     * @param monsterName Nom du monstre contre lequel a perdu le joueur
      */
     public void loseGame(String monsterName) {
         
@@ -210,7 +208,6 @@ public class RogueLuv {
 
     /**
      * Actionne la cellule sous l'utilisateur
-     * @return void
      */
     public void cellAction() {
         Player.getInstance().getActualCell().action();
@@ -220,7 +217,6 @@ public class RogueLuv {
     /**
      * Change le palier actuel
      * @param stairs Escaliers menant au nouveau palier
-     * @return void
      */
     public void moveToFloor(Stairs stairs) {
         this.moveToFloor(stairs.getFloor());
@@ -229,7 +225,6 @@ public class RogueLuv {
     /**
      * Change le palier actuel
      * @param floor Nouveau palier
-     * @return void
      */
     public void moveToFloor(Floor floor) {
         Player player = Player.getInstance();
@@ -248,8 +243,7 @@ public class RogueLuv {
     
     /**
      * Ecris une nouvelle ligne dans la vue Console
-     * @param string de caractères à écrire
-     * @return void
+     * @param string Chaîne de caractères à écrire
      */
     public void writeConsole(String string) {
 
@@ -258,8 +252,7 @@ public class RogueLuv {
 
     /**
      * Gère les touches appuyées
-     * @param e
-     * @return void
+     * @param e Evénement lié à l'appui de touche
      */
     public void keyPressed(KeyEvent e) {
         if (isRunning) {
@@ -309,7 +302,6 @@ public class RogueLuv {
     /**
      * Fonction main
      * @param args Arguments d'entrés du programme
-     * @return void
      */
     public static void main(String[] args) {
         RogueLuv rogueluv = RogueLuv.getInstance();

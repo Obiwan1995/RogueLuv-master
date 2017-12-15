@@ -121,7 +121,7 @@ public class Floor extends Element {
     
     /**
      * Récupère toutes les cellules contenant des escaliers ascendants
-     * @return ArrayList<Cell> Cellules des escaliers
+     * @return ArrayList Cellules des escaliers
      */
     public ArrayList<Cell> getUpstairs() {
         ArrayList<Cell> cells = new ArrayList<Cell>();

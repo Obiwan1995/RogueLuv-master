@@ -64,6 +64,9 @@ public class Monster extends CellType {
     
     /**
      * Constructeur de la classe
+     * @param name Nom du monstre
+     * @param strength Force du monstre
+     * @param gold Quantité d'or portée par le monstre
      */
     public Monster(String name, int strength, int gold) {
         this.name = name;

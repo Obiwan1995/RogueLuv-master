@@ -25,6 +25,7 @@ public class ViewFloor extends JPanel {
     
     /**
      * Constructeur de la classe
+     * @param listener Listener écoutant les appuis de touches
      */
     public ViewFloor(KeyListener listener) {
         initialize(listener);
@@ -32,7 +33,7 @@ public class ViewFloor extends JPanel {
 
     /**
      * Initialise le JPanel `this`
-     * @return void
+     * @param listener Listener écoutant les appuis de touches
      */
     private void initialize(KeyListener listener) {
         //TODO: Set up the size of the JTextArea`floor`
@@ -48,7 +49,6 @@ public class ViewFloor extends JPanel {
     
     /**
      * Met à jour l'affichage du palier
-     * @return void
      */
     public void updateFloor() {
         //TODO: Display the whole floor depending on the actual one in the JTextArea`floor`

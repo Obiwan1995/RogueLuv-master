@@ -21,6 +21,7 @@ public class ViewStats extends JPanel {
        
     /**
      * Constructeur de la classe
+     * @param listener Listener écoutant les appuis de touches
      */
     public ViewStats(KeyListener listener) {
         initialize(listener);
@@ -28,7 +29,7 @@ public class ViewStats extends JPanel {
    
     /**
      * Initialise le JPanel `this`
-     * @return void
+     * @param listener Listener écoutant les appuis de touches
      */
     private void initialize(KeyListener listener) {
         //TODO: Set up the size of the JLabels
@@ -54,7 +55,6 @@ public class ViewStats extends JPanel {
    
     /**
      * Met à jour l'affichage des stats
-     * @return void
      */
     public void updateStats() {
         Player player = Player.getInstance();
@@ -68,7 +68,6 @@ public class ViewStats extends JPanel {
     /**
      * Met à jour l'affichage du nombre de monstres adjacents
      * @param count Nombre de monstres proches
-     * @return void
      */
     public void updateNearMonsters(int count) {
         nearMonsters.setText("Monstres alentours : " + Integer.toString(count));
