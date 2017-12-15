@@ -23,9 +23,6 @@ public class Floor extends Element {
     public void delElement(Element element) {
         this.elements.remove(element);
     }
-    public void setElements(ArrayList<Element> elements) {
-        this.elements = elements;
-    }
     public ArrayList<Element> getElements() {
         return elements;
     }

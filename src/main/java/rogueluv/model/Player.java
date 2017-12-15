@@ -50,14 +50,14 @@ public final class Player {
     }
 
     public void addStrength(int strength) {
-        this.strength += strength;
-        //La force ne peut pas être négative
-        if(this.strength <=0) {
-            this.strength = 0;
-        }
+        this.setStrength(this.strength + strength);
     }
 
     public void setStrength(int strength) {
+        if (strength < 0)
+        {
+            strength = 0;
+        }
         this.strength = strength;
     }
 
@@ -66,10 +66,14 @@ public final class Player {
     }
 
     public void addGold(int gold) {
-        this.gold += gold;
+        this.setGold(this.gold + gold);
     }
 
     public void setGold(int gold) {
+        if (gold < 0)
+        {
+            gold = 0;
+        }
         this.gold = gold;
     }
 
@@ -90,7 +94,12 @@ public final class Player {
      * @return Cell Cellule du joueur
      */
     public Cell getActualCell() {
-        return currentFloor.getCell(position);
+        Cell res = null;
+        if (currentFloor != null)
+        {
+            res = currentFloor.getCell(position);
+        }
+        return res;
     }
 
     /**
@@ -101,36 +110,39 @@ public final class Player {
     public boolean move(Direction direction) {
 
         boolean hasMove = false;
-        switch (direction) {
-        case Up:
-        case North:
-            if (position.getY() > 0) {
-                position.addY(-1);
-                hasMove = true;
-            }
-            break;
-        case Down:
-        case South:
-            if (position.getY() < currentFloor.getSize().getHeight() - 1) {
-                position.addY(+1);
-                hasMove = true;
-            }
-            break;
-        case Left:
-        case West:
-            if (position.getX() > 0) {
-                position.addX(-1);
-                hasMove = true;
-            }
+        switch (direction)
+        {
+            case Up:
+            case North:
+                if (position.getY() > 0) {
+                    position.addY(-1);
+                    hasMove = true;
+                }
+                break;
 
-            break;
-        case Right:
-        case East:
-            if (position.getX() < currentFloor.getSize().getWidth() - 1) {
-                position.addX(+1);
-                hasMove = true;
-            }
-            break;
+            case Down:
+            case South:
+                if (currentFloor != null && position.getY() < currentFloor.getSize().getHeight() - 1) {
+                    position.addY(+1);
+                    hasMove = true;
+                }
+                break;
+
+            case Left:
+            case West:
+                if (position.getX() > 0) {
+                    position.addX(-1);
+                    hasMove = true;
+                }
+                break;
+
+            case Right:
+            case East:
+                if (currentFloor != null && position.getX() < currentFloor.getSize().getWidth() - 1) {
+                    position.addX(+1);
+                    hasMove = true;
+                }
+                break;
         }
         
         return hasMove;

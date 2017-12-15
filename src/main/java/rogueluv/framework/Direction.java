@@ -8,9 +8,7 @@ public enum Direction {
     Up(1),
     Down(2),
     Left(4),
-    Right(8),
-    Upstairs(1024),
-    Downstairs(2048);
+    Right(8);
     
     
     private final int direction;

@@ -1,7 +1,5 @@
 package rogueluv.model;
 
-import rogueluv.controller.RogueLuv;
-
 /**
  * Classe modèle d'un escalier ascendant pour RogueLuv
  * @author gocario

@@ -4,21 +4,6 @@ public class Vector2 {
 
     private int x;
     private int y;
-
-    public Vector2 x(int x) {
-        this.x = x;
-        return this;
-    }
-    public int x() {
-        return x;
-    }
-    public Vector2 y(int y) {
-        this.y = y;
-        return this;
-    }
-    public int y() {
-        return y;
-    }
     
     public void addX(int x) {
         this.x = this.x + x;
@@ -59,25 +44,9 @@ public class Vector2 {
         this.x = v.x;
         this.y = v.y;
     }
-
-
-    public Vector2 add(Vector2 v) {
-        Vector2 vAdd = new Vector2(this.x + v.x, this.y + v.y);
-        return vAdd;
-    }
-
-    public Vector2 substract(Vector2 v) {
-        Vector2 vAdd = new Vector2(this.x - v.x, this.y - v.y);
-        return vAdd;
-    }
-
-    public Vector2 multiply(int v) {
-        Vector2 vAdd = new Vector2(this.x * v, this.y * v);
-        return vAdd;
-    }
     
     public boolean equals(Vector2 v) {
-        return ((v.x == this.x) && (v.y == this.y));
+        return (v != null && (v.x == this.x) && (v.y == this.y));
     }
 
 
@@ -94,9 +63,4 @@ public class Vector2 {
     public final static Vector2 Minus = new Vector2(-1, -1);
     public final static Vector2 Zero = new Vector2(0, 0);
     public final static Vector2 One = new Vector2(1, 1);
-	
-	public static void main(String[] args) 
-	{
-		
-	}
 }

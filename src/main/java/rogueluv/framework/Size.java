@@ -5,6 +5,10 @@ public class Size {
     private int width;
 
     public void setWidth(int width) {
+        if (width < 0)
+        {
+            width = 0;
+        }
         this.width = width;
     }
 
@@ -13,6 +17,10 @@ public class Size {
     }
 
     public void setHeight(int height) {
+        if (height < 0)
+        {
+            height = 0;
+        }
         this.height = height;
     }
 
@@ -20,47 +28,11 @@ public class Size {
         return height;
     }
     
-    public Size() {
-        this.width = 0;
-        this.height = 0;
-    }
-    
     public Size(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
-    
-    public Size(int length) {
-        this.width = length;
-        this.height = length;
-    }
-    
-    public Size(Size size) {
-        this.width = size.getWidth();
-        this.height = size.getHeight();
+        this.setWidth(width);
+        this.setHeight(height);
     }
 
-
-    public Size add(Size s) {
-        Size vAdd = new Size(this.width + s.width, this.height + s.height);
-        return vAdd;
-    }
-
-    public Size substract(Size s) {
-        Size vAdd = new Size(this.width - s.width, this.height - s.height);
-        return vAdd;
-    }
-
-    public Size multiply(int s) {
-        Size vAdd = new Size(this.width * s, this.height * s);
-        return vAdd;
-    }
-    
-    public boolean equals(Size s) {
-        return ((s.width == this.width) && (s.height == this.height));
-    }
-    
-    
     public String toString() {
         return new StringBuilder()
             .append("Size[")

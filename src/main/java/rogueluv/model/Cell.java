@@ -38,14 +38,6 @@ public class Cell extends Element {
         return discovered;
     }
 
-
-    /**
-     * Constructeur de la classe
-     * @param cellType Type de la cellule
-     */
-    public Cell(CellType cellType) {
-        this.cellType = cellType;
-    }
     /**
      * Constructeur de la classe
      */

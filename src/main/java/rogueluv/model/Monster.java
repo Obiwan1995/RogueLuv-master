@@ -34,6 +34,10 @@ public class Monster extends CellType {
     }
     
     public void setStrength(int strength) {
+        if (strength < 0)
+        {
+            strength = 0;
+        }
         this.strength = strength;
     }
 
@@ -46,6 +50,10 @@ public class Monster extends CellType {
     }
     
     public void setGold(int gold) {
+        if (gold < 0)
+        {
+            gold = 0;
+        }
         this.gold = gold;
     }
 
@@ -59,8 +67,8 @@ public class Monster extends CellType {
      */
     public Monster(String name, int strength, int gold) {
         this.name = name;
-        this.strength = strength;
-        this.gold = gold;
+        this.setStrength(strength);
+        this.setGold(gold);
     }
 
 

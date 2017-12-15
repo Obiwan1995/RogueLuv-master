@@ -9,10 +9,14 @@ import rogueluv.controller.RogueLuv;
  */
 public class Treasure extends CellType {
     
-    private int gold = 0;
+    private int gold;
 
 
     public void setGold(int gold) {
+        if (gold < 0)
+        {
+            gold = 0;
+        }
         this.gold = gold;
     }
 
@@ -26,7 +30,7 @@ public class Treasure extends CellType {
      * @param gold Or contenu dans le trésor
      */
     public Treasure(int gold) {
-        this.gold = gold;
+        this.setGold(gold);
     }
 
 
