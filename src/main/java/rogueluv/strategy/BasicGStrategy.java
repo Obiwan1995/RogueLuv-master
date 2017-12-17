@@ -1,9 +1,7 @@
 package rogueluv.strategy;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
-import com.sun.deploy.config.VerboseDefaultConfig;
 import rogueluv.framework.Random;
 import rogueluv.framework.Size;
 import rogueluv.framework.Vector2;
@@ -77,49 +75,21 @@ public class BasicGStrategy extends CoeffGStrategy {
         }
         
         ArrayList<Vector2> positions = new ArrayList<Vector2>() ;
-        
+
+
+        // stairtype :
+        // 0 = STAIRWAY
+        // 1 = UP
+        // 2 = DOWN
+
         // Upstairs
-        while(lUp-- > 0) {
-            Vector2 position = selectPosition(floor, positions, rand);
-            positions.add(position);
-            
-            Cell cell = new Cell();
-            cell.setPosition(position);
-            cell.setCellType(new Upstairs(generateFloor(floor, toTheEnd)));
-            
-            floor.addElement(cell);
-            floor.delElement(floor.getCell(position));
-            
-            toTheEnd = false;
-        }
+        toTheEnd = generateStairs(1, lUp, toTheEnd, floor, rand, positions, parent);
         
         // Downstairs
-        while(lDown-- > 0) {
-            Vector2 position = selectPosition(floor, positions, rand);
-            
-            positions.add(position);
-            
-            Cell cell = new Cell();
-            cell.setPosition(position);
-            cell.setCellType(new Downstairs(parent));
-            
-            floor.addElement(cell);
-            floor.delElement(floor.getCell(position));
-        }
+        toTheEnd = generateStairs(2, lDown, toTheEnd, floor, rand, positions, parent);
         
         // Starway
-        while(lEnd-- > 0) {
-            Vector2 position = selectPosition(floor, positions, rand);
-            
-            positions.add(position);
-            
-            Cell cell = new Cell();
-            cell.setPosition(position);
-            cell.setCellType(new Starway());
-            
-            floor.addElement(cell);
-            floor.delElement(floor.getCell(position));
-        }
+        toTheEnd = generateStairs(0, lEnd, toTheEnd, floor, rand, positions, parent);
         
         
         return floor;
@@ -137,10 +107,31 @@ public class BasicGStrategy extends CoeffGStrategy {
                 }
             }
         }
-
         return position;
     }
 
+    private boolean generateStairs(int stairType,  int limit, boolean toTheEnd, Floor floor, Random rand, ArrayList<Vector2> positions, Floor parent) {
+        while(limit-- > 0) {
+            Vector2 position = selectPosition(floor, positions, rand);
+            positions.add(position);
+
+            Cell cell = new Cell();
+            cell.setPosition(position);
+
+            if(stairType==1) {
+                cell.setCellType(new Upstairs(generateFloor(floor, toTheEnd)));
+                toTheEnd = false;
+            } else if (stairType==2) {
+                cell.setCellType(new Downstairs(parent));
+            } else if (stairType==0) {
+                cell.setCellType(new Starway());
+            }
+
+            floor.addElement(cell);
+            floor.delElement(floor.getCell(position));
+        }
+        return toTheEnd;
+    }
     
     private Cell generateCell(Vector2 position, Floor me, Floor parent) {
         
