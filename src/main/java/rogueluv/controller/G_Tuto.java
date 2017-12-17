@@ -16,14 +16,7 @@ public class G_Tuto {
         try 
         {
             output = new FileOutputStream("tuto.properties");
-            if(activated) 
-            {
-                prop.setProperty("tutorialEnabled", "true");
-            }
-            else 
-            {
-                prop.setProperty("tutorialEnabled", "false");
-            }
+            prop.setProperty("tutorialEnabled", String.valueOf(activated));
             prop.store(output, null);
         } 
         catch (IOException io) 
