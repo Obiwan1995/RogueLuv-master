@@ -155,9 +155,10 @@ public class RogueLuv {
 
         String pseudo = JOptionPane.showInputDialog(null,"Pseudo :");
         writeConsole("Félicitations " + pseudo + " vous avez fini le jeu.");
-        Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (Player.getInstance().getGold()*2));
+        int gold = Player.getInstance().getGold();
+        Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (gold*2));
         if(scoreAdded) {
-            writeConsole(pseudo + " à établi un nouveau record de " + (Player.getInstance().getGold()*2) + " points !");
+            writeConsole(pseudo + " à établi un nouveau record de " + (gold*2) + " points !");
         }
         windowView.showScores();
         isRunning = false;
@@ -168,12 +169,13 @@ public class RogueLuv {
      * @param monsterName Nom du monstre contre lequel a perdu le joueur
      */
     public void loseGame(String monsterName) {
-        
+
         writeConsole("Vous avez été tué par "+monsterName+"...");
         String pseudo = JOptionPane.showInputDialog(null,"Pseudo :");
-        Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (Player.getInstance().getGold()));
+        int gold = Player.getInstance().getGold();
+        Boolean scoreAdded = G_Score.addScore(pseudo + ":" + (gold));
         if(scoreAdded) {
-            writeConsole(pseudo + " à établi un nouveau record de " + (Player.getInstance().getGold()) + " points !");
+            writeConsole(pseudo + " à établi un nouveau record de " + gold + " points !");
         }
         windowView.showScores();
         isRunning = false;

@@ -1,7 +1,9 @@
 package rogueluv.strategy;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
+import com.sun.deploy.config.VerboseDefaultConfig;
 import rogueluv.framework.Random;
 import rogueluv.framework.Size;
 import rogueluv.framework.Vector2;
@@ -31,7 +33,6 @@ public class BasicGStrategy extends CoeffGStrategy {
     
     
     private Floor generateFloor(Floor parent, boolean toTheEnd) {
-        
         Random rand = new Random();
         Floor floor = new Floor();
         if (parent != null) {
@@ -58,7 +59,6 @@ public class BasicGStrategy extends CoeffGStrategy {
         int lUp = 0; //limitUpstairs
         int lEnd = 0; //limitStarway
         
-        
         if (toTheEnd) {
             if (floor.getLevel() != 0) {
                 lUp = rand.rint(1, maxStairs);
@@ -76,23 +76,11 @@ public class BasicGStrategy extends CoeffGStrategy {
             lDown = 1;
         }
         
-        
         ArrayList<Vector2> positions = new ArrayList<Vector2>() ;
         
         // Upstairs
         while(lUp-- > 0) {
-            boolean isNew = false;
-            Vector2 position = Vector2.Minus;
-            while (!isNew) {
-                position = new Vector2(rand.rint(0, floor.getSize().getWidth()), rand.rint(0, floor.getSize().getHeight()));
-                isNew = true;
-                for (int i = 0; i < positions.size() && isNew; i++) {
-                    if (position.equals(positions.get(i))) {
-                        isNew = false;
-                    }
-                }
-            }
-            
+            Vector2 position = selectPosition(floor, positions, rand);
             positions.add(position);
             
             Cell cell = new Cell();
@@ -107,17 +95,7 @@ public class BasicGStrategy extends CoeffGStrategy {
         
         // Downstairs
         while(lDown-- > 0) {
-            boolean isNew = false;
-            Vector2 position = Vector2.Minus;
-            while (!isNew) {
-                position = new Vector2(rand.rint(0, floor.getSize().getWidth()), rand.rint(0, floor.getSize().getHeight()));
-                isNew = true;
-                for (int i = 0; i < positions.size() && isNew; i++) {
-                    if (position.equals(positions.get(i))) {
-                        isNew = false;
-                    }
-                }
-            } 
+            Vector2 position = selectPosition(floor, positions, rand);
             
             positions.add(position);
             
@@ -131,17 +109,7 @@ public class BasicGStrategy extends CoeffGStrategy {
         
         // Starway
         while(lEnd-- > 0) {
-            boolean isNew = false;
-            Vector2 position = Vector2.Minus;
-            while (!isNew) {
-                position = new Vector2(rand.rint(0, floor.getSize().getWidth()), rand.rint(0, floor.getSize().getHeight()));
-                isNew = true;
-                for (int i = 0; i < positions.size() && isNew; i++) {
-                    if (position.equals(positions.get(i))) {
-                        isNew = false;
-                    }
-                }
-            }
+            Vector2 position = selectPosition(floor, positions, rand);
             
             positions.add(position);
             
@@ -156,6 +124,23 @@ public class BasicGStrategy extends CoeffGStrategy {
         
         return floor;
     }
+
+    private Vector2 selectPosition(Floor floor, ArrayList<Vector2> positions, Random rand) {
+        boolean isNew = false;
+        Vector2 position = Vector2.Minus;
+        while (!isNew) {
+            position = new Vector2(rand.rint(0, floor.getSize().getWidth()), rand.rint(0, floor.getSize().getHeight()));
+            isNew = true;
+            for (int i = 0; i < positions.size() && isNew; i++) {
+                if (position.equals(positions.get(i))) {
+                    isNew = false;
+                }
+            }
+        }
+
+        return position;
+    }
+
     
     private Cell generateCell(Vector2 position, Floor me, Floor parent) {
         

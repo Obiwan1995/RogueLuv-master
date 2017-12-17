@@ -198,7 +198,15 @@ public class ViewMenu extends JMenuBar {
     }
     
     public void tuto(){
-        JOptionPane.showConfirmDialog(null, 
+        JOptionPane.showConfirmDialog(null,
+            "Bienvenue sur le rogue-like rogueluv\n\n" +
+            "L'objectif de ce jeu est d'atteindre la sortie du labyrinthe\n" +
+            "tout en amassant le maximum de pièces d'or que vous trouverez réparties\n" +
+            "dans les trésors ou sur les cadavres des monstres vaincus.\n" +
+            "N'oubliez pas de récolter de la force en récupérant moultes potions,\n" +
+            "mais soyez vigilant car certaines d'entre elles peuvent vous affaiblir.\n" +
+            "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
+            "Contrôles :\n" +
             "Déplacement : ZQSD ou les flèches directionnelles.\n" +
             "Appuyez sur [Y] pour emprunter un escalier\n" +
             "Difficulté modifiable dans le menu correspondant\n" +
